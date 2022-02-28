@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #333333;
+    --rojo: red;
+    --verde: lime;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+.fondo_rojo {
+    background-color: var(--rojo);
+}
+
+.char_rojo {
+    color: var(--rojo);
+}
+
+#tablilla {
+    width: 50vw;
+    margin: auto;
+}
