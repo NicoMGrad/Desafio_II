@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./imgs/favicon.ico" type="image/x-icon">  
     <!--VUE CDN-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <!--Componentes-->
     <script src="./componentes/tabla.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilos_gral.css">
     <title>Desafio II - Nicolás Mercado Grad</title>
 </head>
 <body>
-    <h1>Desafío II</h1>
-    <h2>Nicolás Mercado Grad</h2>
+    <h1>VUEjs</h1>
+    <h2>Desafío2</h2>
     <div id="tablilla">
-        <tabla  :booleano="condicional" :lista="items" :texto="textito" :numero="num" :objeto="saludo" :fecha="prueba"></tabla>
+        <tabla :estilo="childclass" :booleano="condicional" :lista="items" :texto="textito" :numero="num" :objeto="saludo" :fecha="fecha" :class="fondoNegro"></tabla>
+    </div>
+    <div id="footer">
+        <img src="./imgs/logo_coder-01.svg" class="logo" />
+        <div>
+            <p><strong>CURSO VUE.JS</strong></p>
+            <p>Nicolás Mercado Grad</p>
+        </div>
     </div>
 
     <script>
@@ -32,8 +44,9 @@
                     hola: 'Holis',
                     nombre: ' quien quiera que seas'
                 },
-                prueba: new Date(1995,11,17)
-
+                fecha: new Date(1995,11,17),
+                childclass: 'fnt_verde',
+                fondoNegro: 'table-dark'
             }
         });
     </script>

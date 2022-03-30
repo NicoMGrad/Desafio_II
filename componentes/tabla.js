@@ -2,15 +2,15 @@ Vue.component('tabla', {
     template: //html
     `
 
-        <table class="table table table-dark">
+        <table class="table">
     
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">
+                    <th scope="col" :class="estilo">#</th>
+                    <th scope="col" :class="estilo">
                         Tipos de datos
                     </th>
-                    <th scope="col">
+                    <th scope="col" :class="estilo">
                         Datos
                     </th>
                 </tr>
@@ -83,14 +83,17 @@ Vue.component('tabla', {
             type: Array,
             required:true
         },
+        fuente: String,
         texto: String,
         numero: Number,
         objeto: Object,
         fecha: {
             type: Date,
-            default: function () { return new Date() 
+            default: function () { 
+                return new Date() 
                     }
-        }
+        },
+        estilo: String
     }
 
 });
